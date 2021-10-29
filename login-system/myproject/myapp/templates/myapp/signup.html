@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <title>Signup page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'myapp/css/all.min.css'%}">
+    <link rel="stylesheet" href="{% static 'myapp/css/bootstrap.css'%}">
+
+<style>
+body{
+           background:orange;
+          }
+
+          </style>
+</head>
+<body>
+ <h1 class="text-center text-primary">Sign_Up here</h1>
+    <form method="POST">
+        {%csrf_token%}
+        <div class="col-md-12 col-sm-12 col-xs-12 nopadding">
+
+
+       <hr>
+        <hr>
+
+        <div class="container">
+        <div class="form-row">
+          <div class="form-group col-md-8">
+            <label for="Name">First Name</label>
+            <input type="text" class="form-control" name="Firstname" placeholder="First Name" autocomplete="false">
+          </div>
+
+          <div class="form-group col-md-8">
+            <label for="Name">Last Name</label>
+            <input type="text" class="form-control" name="Lastname" placeholder="Last Name" autocomplete="false">
+          </div>
+
+          <div class="form-group col-md-8">
+            <label for="Email">Email ID</label>
+            <input type="text" class="form-control" name="email" placeholder="Email" autocomplete="false">
+          </div>
+        </div>
+
+        <div class="form-group col-md-8  text-secondary" >
+          <label for="Mobile">Mobile Number</label>
+          <input type="text" class="form-control" name="mobile" placeholder="Mobile Number" autocomplete="false">
+        </div>
+
+        <div class="form-group col-md-8">
+            <label for="Password">Set Password</label>
+            <input type="password" class="form-control" name="password" placeholder="Password" autocomplete="false">
+          </div>
+
+
+          <div class="form-group col-md-8">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+        </div>
+      </form>
+        <script src="{% static 'core/js/jquery.js'%}"></script>
+        <script src="{% static 'core/js/bootstrap.js'%}"></script>
+        <script src="{% static 'core/js/all.min.js'%}"></script>
+        <script src="{% static 'core/js/popper.js'%}"></script>
+</body>
+</html>
+
+
+

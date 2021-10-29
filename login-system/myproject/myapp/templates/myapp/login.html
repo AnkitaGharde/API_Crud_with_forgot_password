@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <title>Login form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=3">
+    <link rel="stylesheet" href="{% static 'myapp/css/all.min.css'%}">
+    <link rel="stylesheet" href="{% static 'myapp/css/bootstrap.css'%}">
+
+    <style>
+body{
+           background: gray;
+          }
+    </style>
+
+</head>
+<script>
+    function validate() {
+        var name = document.getElementby
+    }
+</script>
+
+<body>
+<h1 class="text-center text-primary">Login here</h1>
+
+    <form method="POST">
+        {%csrf_token%}
+
+
+        <div class="container">
+
+
+
+            <div class="form-group ">
+                <label for="User-Name">User ID</label>
+                <input class="form-control" type="text" placeholder="User ID" name="email">
+            </div>
+            <div class="form-group">
+                <label for="User-Name">Password</label>
+                <input class="form-control" type="text" placeholder="Password" name="password">
+            </div>
+            <a href="{% url 'resetpass' %}"<p> Forgotten your password?</p></a>
+
+            <center>
+                <button class="btn btn-outline-success mt-4" onsubmit="validate()">Login</button>
+                <br>
+                <h5>If You Don'te Have Account</h5> <a href="{% url 'signup' %}">Register Here</a>
+
+            </center>
+        </div>
+    </form>
+        <script src="{% static 'core/js/jquery.js'%}"></script>
+        <script src="{% static 'core/js/bootstrap.js'%}"></script>
+        <script src="{% static 'core/js/all.min.js'%}"></script>
+        <script src="{% static 'core/js/popper.js'%}"></script>
+</body>
+
+</html>

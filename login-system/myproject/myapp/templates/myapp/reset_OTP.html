@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ResetOTP</title>
+</head>
+<body>
+<h1>Forgotten your password?</h1>
+<p>Enter your OTP to Set a new password.</p>
+<form action="{% url 'otp'%}" method="post">
+
+<div class="form-group ">
+<label for="User-Name" >OTP</label>
+<input class="form-control" type="number" placeholder="OTP" name="OTP">
+</div>
+<p><input type="submit" value="Submit"></p>
+{% csrf_token %}
+</form>
+</body>
+</html>
